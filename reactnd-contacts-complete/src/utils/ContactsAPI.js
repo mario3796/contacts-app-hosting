@@ -1,4 +1,4 @@
-const api = process.env.REACT_APP_CONTACTS_API_URL || 'http://localhost:4000'
+const api = process.env.REACT_APP_CONTACTS_API_URL || 'database-1.czbsqouvazbc.us-east-1.rds.amazonaws.com'
 
 let token = localStorage.token
 
