@@ -30,4 +30,4 @@ app.zip
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
-screenshots
+/reactnd-contacts-server/.elasticbeanstalk/*
