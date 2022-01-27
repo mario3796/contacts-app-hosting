@@ -6,28 +6,22 @@ const config = require("./config");
 const path = require("path");
 const contacts = require("./contacts");
 
+require("dotenv").config()
+
 const app = express();
 
 app.use(express.static("public"));
 app.use(cors());
 
-// const sequelize = new Sequelize("postgres", "postgres", "postgres", {
-//   host: "database-1.czbsqouvazbc.us-east-1.rds.amazonaws.com",
-//   dialect: "postgres",
-//   port: 5432,
-//   ssl: "Amazon RDS",
-//   maxConcurrentQueries: 100,
-//   logging: console.log,
-//   pool: { maxConnections: 5, maxIdleTime: 30 },
-//   language: "en"
-// });
-
 // const sequelize = new Sequelize('postgres://postgres:postgres@database-1.czbsqouvazbc.us-east-1.rds.amazonaws.com:5432/postgres');
 
-const sequelize = new Sequelize("contacts", "postgres", "root", {
-  host: "127.0.0.1",
-  dialect: "postgres",
-  port: 5432
+const sequelize = new Sequelize(
+  process.env.POSTGRES_DB,
+  process.env.POSTGRES_USERNAME,
+  process.env.POSTGRES_PASSWORD, {
+  host: process.env.POSTGRES_HOST,
+  dialect: process.env.DB_DIALECT,
+  port: process.env.DB_PORT
 })
 
 class User extends Model {}
