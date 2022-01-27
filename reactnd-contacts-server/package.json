@@ -11,7 +11,7 @@
   "scripts": {
     "start": "nodemon server.js",
     "clean": "rmdir /s /q www && mkdir www",
-    "build": "yarn clean && cp -rf client/ www/client && cp -rf node_modules www/node_modules && cp -rf public/ www/public && cp config.js contacts.js server.js package.json www",
+    "build": "npm run clean && cp -rf client/ www/client && cp -rf node_modules www/node_modules && cp -rf public/ www/public && cp config.js contacts.js server.js package.json www",
     "zip": "yarn build && cd www && 7z a -tzip ../app.zip *"
   },
   "devDependencies": {
