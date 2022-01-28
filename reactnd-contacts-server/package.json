@@ -12,7 +12,7 @@
   "scripts": {
     "test": "echo \"no test specified\"",
     "start": "nodemon server.js",
-    "clean": "rmdir /s /q www && mkdir www",
+    "clean": "rm -rf www && mkdir www",
     "build": "npm run clean && cp -rf client/ www/client && cp -rf node_modules www/node_modules && cp -rf public/ www/public && cp config.js contacts.js server.js package.json www",
     "zip": "yarn build && cd www && 7z a -tzip ../app.zip *"
   },
