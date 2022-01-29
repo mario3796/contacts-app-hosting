@@ -35,6 +35,25 @@ jobs:
       - checkout
       - aws-cli/setup
       - run:
+          name: Back-End install
+          command: |
+            npm run backend:install
+      - run:
+          name: Back-End Build
+          command: |
+            npm run backend:build
+       - run:
+          name: Installing deployment dependencies
+          working_directory: /
+          command: |
+            sudo apt-get -y -qq update
+            sudo apt-get install python3-pip python3-dev build-essential
+            sudo pip3 install awsebcli
+        - run:
+          name: Back-End Deploy
+          command: |
+            npm run backend:deploy
+      - run:
           name: Front-End install
           command: |
             npm run frontend:install
@@ -43,7 +62,7 @@ jobs:
           command: |
             npm run frontend:build
       - run:
-          name: Deploy App
+          name: Front-End Deploy
           command: |
             npm run frontend:deploy
 workflows:
