@@ -34,20 +34,17 @@ jobs:
       - node/install
       - checkout
       - aws-cli/setup
-      - run :
-          name: Install Repository
-          command: |
-            sudo add-apt-repository universe
-            sudo apt update
       - run:
-          name: Install AWS dependencies
+          name: Front-End Build
           command: |
-            sudo pip install awsebcli --upgrade --user
-            sudo apt-get install awscli
+            npm run frontend:build
+      - run:
+          name: Back-End Build
+          command: |
+            npm run backend:build
       - run:
           name: Deploy App
           command: |
-            npm run backend:deploy
             npm run frontend:deploy
 workflows:
   contacts:
