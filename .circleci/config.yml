@@ -3,6 +3,7 @@ orbs:
   node: circleci/node@4.1.0
   aws-cli: circleci/aws-cli@1.3.1
 jobs:
+  branch: master
   build:
     docker:
       - image: "cimg/base:stable"
@@ -38,16 +39,22 @@ jobs:
           command: |
             sudo add-apt-repository universe
             sudo apt update
-      - run:
-          name: Deploy App
-          command: echo ${EB_ENV}
-
       -  run:
           name: Install Python
           command: sudo apt-get install python
       - run:
           name: Install PIP
           command: sudo apt-get install pip
+      - run:
+          name: Install AWS dependencies
+          command: |
+            sudo pip install awsebcli --upgrade --user
+            sudo apt-get install awscli
+      - run:
+          name: Deploy App
+          command: |
+            npm run backend:deploy
+            npm run frontend:deploy
 workflows:
   contacts:
     jobs:
