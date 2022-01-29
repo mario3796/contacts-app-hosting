@@ -48,6 +48,6 @@ jobs:
             npm run frontend:deploy
 workflows:
   contacts:
-    steps:
+    jobs:
       - build
       - deploy
