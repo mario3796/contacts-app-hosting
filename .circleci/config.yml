@@ -42,7 +42,7 @@ jobs:
           name: Back-End Build
           command: |
             npm run backend:build
-       - run:
+      - run:
           name: Installing deployment dependencies
           working_directory: /
           command: |
