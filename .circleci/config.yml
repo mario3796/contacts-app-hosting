@@ -38,20 +38,16 @@ jobs:
           command: |
             sudo add-apt-repository universe
             sudo apt update
+      - run:
+          name: Deploy App
+          command: echo ${EB_ENV}
+
       -  run:
           name: Install Python
           command: sudo apt-get install python
       - run:
           name: Install PIP
           command: sudo apt-get install pip
-      - run:
-          name: Deploy App
-          command: |
-            sudo pip install awsebcli --upgrade --user
-            sudo apt-get install awscli
-            sudo eb init contacts-app --platform node.js --region us-east-1
-            sudo eb create
-            npm run frontend:deploy
 workflows:
   contacts:
     jobs:
