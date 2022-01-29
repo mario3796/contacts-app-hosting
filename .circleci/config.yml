@@ -26,7 +26,18 @@ jobs:
           name: Back-End Build
           command: |
             npm run backend:build
+  deploy:
+    docker:
+      - image: "cimg/base:stable"
+    steps:
+      - node/install
       - run:
           name: Deploy App
           command: |
+            npm run backend:deploy
             npm run frontend:deploy
+workflows:
+  contacts:
+    jobs:
+      - build
+      - deploy
