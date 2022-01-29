@@ -6,6 +6,7 @@
     "frontend:test": "cd reactnd-contacts-complete && npm run test",
     "backend:build": "cd reactnd-contacts-server && npm run build",
     "frontend:build": "cd reactnd-contacts-complete && npm run build",
+    "backend:deploy": "cd reactnd-contacts-server && npm run deploy",
     "frontend:deploy": "cd reactnd-contacts-complete && npm run deploy"
   },
   "name": "app-hosting",
