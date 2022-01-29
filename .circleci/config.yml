@@ -35,13 +35,13 @@ jobs:
       - checkout
       - aws-cli/setup
       - run:
+          name: Front-End install
+          command: |
+            npm run frontend:install
+      - run:
           name: Front-End Build
           command: |
             npm run frontend:build
-      - run:
-          name: Back-End Build
-          command: |
-            npm run backend:build
       - run:
           name: Deploy App
           command: |
