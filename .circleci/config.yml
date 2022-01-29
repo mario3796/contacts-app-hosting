@@ -33,9 +33,14 @@ jobs:
       - node/install
       - checkout
       - aws-cli/setup
+      - run :
+          name: Install Repository
+          command: |
+            sudo add-apt-repository universe
+            sudo apt update
       -  run:
           name: Install Easy Install
-          command: sudo apt-get install python
+          command: sudo apt-get install python-pip
       - run:
           name: Install PIP
           command: sudo easy_install pip
