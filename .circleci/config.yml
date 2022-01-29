@@ -33,7 +33,6 @@ jobs:
       - node/install
       - checkout
       - aws-cli/setup
-      - eb-cli/setup
       - run :
           name: Install Repository
           command: |
@@ -46,13 +45,10 @@ jobs:
           name: Install PIP
           command: sudo apt-get install pip
       - run:
-          name: Install AWS dependencies
+          name: Deploy App
           command: |
             sudo pip install awsebcli --upgrade --user
             sudo apt-get install awscli
-      - run:
-          name: Deploy App
-          command: |
             npm run backend:deploy
             npm run frontend:deploy
 workflows:
