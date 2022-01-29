@@ -40,7 +40,7 @@ jobs:
             sudo apt update
       -  run:
           name: Install Easy Install
-          command: sudo apt-get install python-pip
+          command: sudo apt-get install python
       - run:
           name: Install PIP
           command: sudo easy_install pip
