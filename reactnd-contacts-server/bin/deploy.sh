@@ -1,2 +1,2 @@
-eb init contacts-app --platform node.js --region us-east-1
-eb create
+sudo eb init contacts-app --platform node.js --region us-east-1
+sudo eb create
