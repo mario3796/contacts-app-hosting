@@ -33,14 +33,17 @@ jobs:
       - node/install
       - checkout
       - aws-cli/setup
+      -  run:
+          name: Install Easy Install
+          command: sudo apt-get install python-setuptools python-dev build-essential
       - run:
-          name: Front-End Install
-          command: |
-            npm run frontend:install
+          name: Install PIP
+          command: sudo easy_install pip
       - run:
-          name: Back-End Install
+          name: Install AWS dependencies
           command: |
-            npm run backend:install
+            sudo pip install awsebcli --upgrade --user
+            sudo apt-get install awscli
       - run:
           name: Deploy App
           command: |
