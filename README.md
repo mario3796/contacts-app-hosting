@@ -34,7 +34,14 @@ can respond to changes in customer preferences or requirements and the quality o
 - First, go sign in to AWS website and search for RDS service.
 - Then click on databases on the navigation pane, and click on create database
 - To create database, follow these steps
-  - choose standard create for creation method, then choose postgres engine type.
+  - Choose standard create for creation method, then choose postgres engine type.
   ![This is a alt text.](https://github.com/mario3796/contacts-app-hosting/blob/master/images/screenshots/RDS(1).png "This is a sample image.")
+  - Choose the PostgreSQL 12.5-R1, then choose the free tier template
+  ![This is a alt text.](https://github.com/mario3796/contacts-app-hosting/blob/master/images/screenshots/RDS(2).png "This is a sample image.")
+  - In the settings fill the username and password, and in the connectivity set public access to Yes
+  ![This is a alt text.](https://github.com/mario3796/contacts-app-hosting/blob/master/images/screenshots/RDS(3).png "This is a sample image.")
+  - In the additional configuration fill the initial database name, then click on create database
+  ![This is a alt text.](https://github.com/mario3796/contacts-app-hosting/blob/master/images/screenshots/RDS4().png "This is a sample image.")
+- finally the database will be created.
 
 <!-- - Frontend Link: [http://udagram-frontend-2.s3-website-us-east-1.amazonaws.com/](http://udagram-frontend-2.s3-website-us-east-1.amazonaws.com/) -->
