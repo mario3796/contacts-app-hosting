@@ -35,6 +35,6 @@ can respond to changes in customer preferences or requirements and the quality o
 - Then click on databases on the navigation pane, and click on create database
 - To create database, follow these steps
   - choose standard create for creation method, then choose postgres engine type.
-  ![This is a alt text.](./images/screenshots/RDS(1).png"This is a sample image.")
+  ![This is a alt text.](https://github.com/mario3796/contacts-app-hosting/blob/master/images/screenshots/RDS(1).png" This is a sample image.")
 
 <!-- - Frontend Link: [http://udagram-frontend-2.s3-website-us-east-1.amazonaws.com/](http://udagram-frontend-2.s3-website-us-east-1.amazonaws.com/) -->
