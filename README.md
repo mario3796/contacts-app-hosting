@@ -41,7 +41,25 @@ can respond to changes in customer preferences or requirements and the quality o
   - In the settings fill the username and password, and in the connectivity set public access to Yes
   ![This is a alt text.](https://github.com/mario3796/contacts-app-hosting/blob/master/images/screenshots/RDS(3).png "This is a sample image.")
   - In the additional configuration fill the initial database name, then click on create database
-  ![This is a alt text.](https://github.com/mario3796/contacts-app-hosting/blob/master/images/screenshots/RDS4().png "This is a sample image.")
+  ![This is a alt text.](https://github.com/mario3796/contacts-app-hosting/blob/master/images/screenshots/RDS(4).png "This is a sample image.")
 - finally the database will be created.
+
+---
+
+### Backend Deployment
+
+- To deploy backend application, do the following steps:
+  - Make sure you have installed the node_modules by running ```npm install```
+  - Build the application by running ```npm run build```
+  - Run ```eb init```, this command will create 'config.yml' file inside '.elasticbeanstalk' folder
+  - Then configure the file with the way that you want
+  - Run ```npm create```, to deploy your build folder on aws elastic beanstalk service
+  - To edit the deployed built project, compress your built project in zip file  
+  by running this command ```npm run zip```, then move to config.yml file then add this  
+  ![This is a alt text.](https://github.com/mario3796/contacts-app-hosting/blob/master/images/screenshots/ebdeploy.png "This is a sample image.")
+  - Then run ```eb use``` to use the environment.
+  - Then run ```eb deploy``` to deploy the compressed project to the cloud
+  - Finally, that will appear to you
+  ![This is a alt text.](https://github.com/mario3796/contacts-app-hosting/blob/master/images/screenshots/ebhealth.png "This is a sample image.")
 
 <!-- - Frontend Link: [http://udagram-frontend-2.s3-website-us-east-1.amazonaws.com/](http://udagram-frontend-2.s3-website-us-east-1.amazonaws.com/) -->
