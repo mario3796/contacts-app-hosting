@@ -99,4 +99,36 @@ can respond to changes in customer preferences or requirements and the quality o
 
   - Frontend Link: [http://udagram-frontend-2.s3-website-us-east-1.amazonaws.com/](http://udagram-frontend-2.s3-website-us-east-1.amazonaws.com/)
 
+---
 
+### CircleCI Setup
+
+- To setup circleCI, do the following steps:
+  - First, insert your backend and frontend projects in one folder.
+  - create a package.json file in the root folder and insert in it some scripts for building,  
+  testing & deployment frontend and backend projects.
+  - Create .circleci folder in the root folder, then create config.yml file inside it.
+  - The folder structure will be like this
+  
+  ```
+  .
+  +-- .circleci
+  |   +-- config.yml
+  +-- backend-project-folder
+  +-- frontend-project-folder
+  +-- package.json
+  ```
+
+  - In the config.yml, create your own orbs, jobs, set of commands inside each job & workflows
+  - After that run this command ```git init``` to initialize your local repository.
+  - Then commit that changes you made by running ```git commit -m your-message```
+  - To create a remote repository, go sign in Github, and create a repository.
+  - Then run this command ```git remote add origin your-remote-repo-link``` to connect the  
+  local repository to remote repository.
+  - To push your commits to remote repository in master branch run this command ```git push -u origin master```
+  - Go to sign in circleCI by your GitHub account and you will find your repositories.
+  - Choose your most recent repository and click on Set up Project, then choose the second choice,  
+  and write the name of branch where config.yml exist, then click on Let's Go.
+  - We will see that the jobs and workflows run automatically.
+  - Finally click to project settings & choose Environment Variables and fill them with  
+  your credentials & rerun the workflow again.
