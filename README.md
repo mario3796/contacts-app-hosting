@@ -90,7 +90,7 @@ can respond to changes in customer preferences or requirements and the quality o
   - Fill the Index document by typing index.html, then click on Save changes.
   - Click on permissions tab, then scroll down to Bucket policy and click on Edit.
   - In Edit Bucket policy, fill the policy with this
-    ![This is a alt text.](https://github.com/mario3796/contacts-app-hosting/blob/master/images/screenshots/s3acknowledge.png)
+    ![This is a alt text.](https://github.com/mario3796/contacts-app-hosting/blob/master/images/screenshots/bucketpolicy.png)
   - Then replace bucketname with the name of bucket you created, then click on Save changes.
   - To upload the built project, you should configure your credentials by running this command ```aws configure```
   - Then run this ```aws s3 cp --recursive --acl public-read ./build s3://$S3_BUCKET/``` to upload your files.
