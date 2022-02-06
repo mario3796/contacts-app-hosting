@@ -56,9 +56,9 @@ workflows:
           filters:
             branches:
               only:
-                - main
+                - master
       - backend-deploy:
           filters:
             branches:
               only:
-                - main
+                - master
