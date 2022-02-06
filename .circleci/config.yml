@@ -53,12 +53,12 @@ workflows:
   contacts:
     jobs:
       - frontend-deploy:
-        - filters:
-          - branches:
-            - only:
-              - main
+          filters:
+            branches:
+              only:
+                - main
       - backend-deploy:
-        - filters:
-          - branches:
-            - only:
-              - main
+          filters:
+            branches:
+              only:
+                - main
