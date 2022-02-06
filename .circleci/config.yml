@@ -52,5 +52,13 @@ jobs:
 workflows:
   contacts:
     jobs:
-      - frontend-deploy
-      - backend-deploy
+      - frontend-deploy:
+          filters:
+            branches:
+              only:
+                - main
+      - backend-deploy:
+          filters:
+            branches:
+              only:
+                - main
